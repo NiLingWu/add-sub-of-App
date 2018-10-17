@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6e7f7"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/tv_style"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:text="设置题型"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/group_style"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/tv_style"
+        app:layout_constraintTop_toBottomOf="@+id/tv_style">
+
+        <RadioButton
+            android:id="@+id/Rbtn_jia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="加法"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/Rbtn_jian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="减法（结果为正）"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/Rbtn_hun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="加减混合"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="431dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:text="设置题目数量（最少10题，最多40题）"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/group_style"
+        app:layout_constraintTop_toBottomOf="@+id/group_style" />
+
+    <SeekBar
+        android:id="@+id/bar_num"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="12dp"
+        android:max="30"
+        app:layout_constraintStart_toStartOf="@+id/tv_num"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num" />
+
+    <TextView
+        android:id="@+id/tv_wei"
+        android:layout_width="361dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:text="设置题目位数"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/bar_num"
+        app:layout_constraintTop_toBottomOf="@+id/bar_num" />
+
+    <RadioGroup
+        android:id="@+id/group_wei"
+        android:layout_width="405dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/tv_wei"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wei">
+
+        <RadioButton
+            android:id="@+id/Rbtn_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="一位数（包括0）"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="383dp" />
+
+        <RadioButton
+            android:id="@+id/Rbtn_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="两位数"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="205dp"
+            tools:layout_editor_absoluteY="415dp" />
+
+        <RadioButton
+            android:id="@+id/Rbtn_weihun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="一两位数混合"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="88dp"
+            tools:layout_editor_absoluteY="461dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:text="重置"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_wei" />
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:text="确认"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_reset"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tipnum"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="挑战的题数是：10"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bar_num"
+        app:layout_constraintStart_toEndOf="@+id/bar_num" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="重置或设置好记得点击确认保存"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset" />
+
+</android.support.constraint.ConstraintLayout>
